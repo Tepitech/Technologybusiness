@@ -1,0 +1,15 @@
+<div class="add-article-container">
+  <h2>Ajouter un Article</h2>
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Titre:</label>
+      <input type="text" id="title" formControlName="title" required>
+    </div>
+    <div class="form-group">
+      <label for="content">Contenu:</label>
+      <textarea id="content" formControlName="content" rows="10" required></textarea>
+    </div>
+    <button type="submit" [disabled]="!articleForm.valid">Ajouter l'Article</button>
+  </form>
+  <button class="back-button" (click)="goBack()">Retour aux Articles</button>
+</div>

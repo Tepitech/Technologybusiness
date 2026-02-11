@@ -1,0 +1,19 @@
+<header class="modern-header">
+  <div class="header-content">
+    <div class="brand" style="display: flex;margin: 2px; align-items: center;" >
+      <!-- <h1>T&B</h1> -->
+      <img src="logo.png"  style="width: 120px;height: 60px; margin-top: 7px;"/>
+      <span style="padding: 2px;">TECHNOLOGY & BUSINESS</span>
+    </div>
+    <button class="hamburger-menu" (click)="toggleMenu()" aria-label="Toggle menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <nav class="nav-menu" [class.open]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active" (click)="isMenuOpen = false">Accueil</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen = false">À propos</a>
+      <a routerLink="/services" routerLinkActive="active" (click)="isMenuOpen = false">Services</a>
+      <a routerLink="/articles" routerLinkActive="active" (click)="isMenuOpen = false">Articles</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
+    </nav>
+  </div>
+</header>

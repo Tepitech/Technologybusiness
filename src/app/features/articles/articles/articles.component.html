@@ -1,0 +1,40 @@
+<section class="articles-hero">
+  <div class="container">
+    <div class="articles-hero-content">
+      <h1>Articles</h1>
+      <p>Découvrez nos articles et ressources</p>
+    </div>
+  </div>
+</section>
+
+<section class="articles-content">
+  <div class="container">
+    <div class="articles-grid" *ngIf="articles.length > 0; else noArticles">
+      <div class="article-card" *ngFor="let article of articles">
+        <div class="article-image-container">
+          <a [href]="'/' + article.src" target="_blank">
+            <img [src]="'/' + article.src" [alt]="article.alt" class="article-image">
+          </a>
+        </div>
+        <div class="article-info">
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.description }}</p>
+          <a href="https://wa.me/79803856" target="_blank" class="whatsapp-link">Commander via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <ng-template #noArticles>
+      <p class="no-articles">Aucun article disponible pour le moment.</p>
+    </ng-template>
+  </div>
+</section>
+
+<section class="articles-cta">
+  <div class="container">
+    <div class="articles-cta">
+      <h2>Vous voulez en savoir plus ?</h2>
+      <p>Contactez-nous pour plus d'informations sur nos articles.</p>
+      <button class="cta-button">Contactez-nous</button>
+    </div>
+  </div>
+</section>

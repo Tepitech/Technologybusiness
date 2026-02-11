@@ -1,0 +1,15 @@
+.not-found-card {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.not-found-card a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.not-found-card a:hover {
+  text-decoration: underline;
+}
